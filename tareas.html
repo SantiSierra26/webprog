@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <title>Tareas</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            document.querySelector("#tarea").value = "";
+            document.querySelector("#enviar").disabled = true;
+
+            document.querySelector("#tarea").onkeyup = () => {
+                if (document.querySelector("#tarea").value.length > 0){
+                    document.querySelector("#enviar").disabled = false;
+                } else {
+                    document.querySelector("#enviar").disabled = true;
+                }
+            }
+
+            document.querySelector("form").onsubmit = () => {
+
+                const tarea = document.querySelector("#tarea").value;
+
+                //li = list item
+                const li = document.createElement("li");
+                li.innerHTML = tarea;
+                document.querySelector("#lista").append(li);
+
+                document.querySelector("#tarea").value = "";
+                document.querySelector("#enviar").disabled = true;
+
+                return false;
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1>Tareas</h1>
+    <ul id="lista">
+    </ul>
+
+    <form>
+        <input id="tarea" placeholder="Nueva tarea" type="text">
+        <input id="enviar" type="submit">
+    </form>
+</body>
+</html>
