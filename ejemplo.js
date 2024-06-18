@@ -1,6 +1,5 @@
-const c = 10;
-
-const myFunc = () => {}
+const a = 10;
+const b = () => {console.log("Hola bro")}
 
 if (!localStorage.getItem("contador")){
     localStorage.setItem("contador", 0);
