@@ -1,4 +1,5 @@
 const a = 30;
+const b = () => {}
 
 if (!localStorage.getItem("contador")){
     localStorage.setItem("contador", 0);
