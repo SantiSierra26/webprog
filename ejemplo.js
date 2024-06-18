@@ -1,5 +1,5 @@
 const a = 10;
-const b = () => {}
+const b = () => {console.log("Hola bro")}
 
 if (!localStorage.getItem("contador")){
     localStorage.setItem("contador", 0);
