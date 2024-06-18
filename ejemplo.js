@@ -1,4 +1,4 @@
-const a = 10;
+const a = 30;
 
 if (!localStorage.getItem("contador")){
     localStorage.setItem("contador", 0);
